@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/mytom_style.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <title>TOM N TOMS COFFEE - my tom</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    let list = $(".m_cont_bt>li").index();
+    $(".m_cont_bt>li").click(function(){
+      let list = $(this).index();
+      $(".m_cont_bt>li").removeClass("on");
+      $(".m_cont_bt>li").eq(list).addClass("on");
+
+      $(".m_phone_cont>li").stop().fadeOut();
+      $(".m_phone_cont>li").eq(list).stop().fadeIn();
+    });
+
+
+    $(".top_btn").click(function(){
+      $('html, body').stop().animate({scrollTop : 0}, 500);
+    });
+  });
+</script>
+<body>
+    <div id="header">
+    <h1 class="logo"><a href="index.html"><img src="images/menu/logo.png" alt="logo"></a></h1>
+    <div class="nav_bg">
+      <ul class="nav">
+        <li>
+          <a href="#">TOM N TOMS</a>
+          <ul class="nav_sub">
+            <li><a href="#">브랜드 소개</a></li>
+            <li><a href="#">채용안내</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">찾아오시는 길</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="menu.html">MENU</a>
+          <ul class="nav_sub">
+            <li><a href="#">신메뉴</a></li>
+            <li><a href="#">음료</a></li>
+            <li><a href="#">푸드</a></li>
+            <li><a href="#">MD</a></li>
+          </ul>
+        </li>
+        <li><a href="#">EVENT</a></li>
+        <li>
+          <a href="#">STORE</a>
+          <ul class="nav_sub">
+            <li><a href="#">국내매장</a></li>
+            <li><a href="#">해외매장</a></li>
+            </ul>
+        </li>
+        <li><a href="my_tom.html">MY TOM</a></li>
+        <li>
+          <a href="#">SERVICE</a>
+          <ul class="nav_sub">
+            <li><a href="#">가맹점 개설문의</a></li>
+            <li><a href="#">렌탈 서비스</a></li>
+            <li><a href="#">탐스 라이프 스토어</a></li>
+            <li><a href="#">제휴 할인</a></li>
+            <li><a href="#">제휴 문의</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">COMUNITY</a>
+          <ul class="nav_sub">
+            <li><a href="#">고객의 소리</a></li>
+            <li><a href="#">예술문화활동</a></li>
+            <li><a href="#">사회공헌활동</a></li>
+          </ul>
+        </li>
+      <li>
+        <a href="#">KR ▼</a>
+        <ul class="last_sub">
+          <li>KOR</li>
+          <li>ENG</li>
+          <li>CHN</li>
+        </ul>
+      </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="section">
+    <div class="top_btn">
+        <span>TOP</span>
+    </div>
+    <div class="wrap_m_br">
+        <ul class="bn_img">
+            <li></li>
+            <li></li>
+        </ul>
+        <ul class="bn_bt">
+            <li class="on"></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="tom_bg">
+      <div class="bg_txt">
+        <p>MEMBERSHIP</p>
+      <h1>마이탐 멤버십</h1>
+      </div>
+    </div>
+    <div class="special">
+      <div class="s_bg">
+        <h1>마이탐의 특별한 기능</h1>
+        <ul class="s_list">
+          <li><p>모바일 선불카드 관리</p><img src="images/mytom/icon_1.png" alt="card"></li>
+          <li><p>스마트오더(GPS기반)</p><img src="images/mytom/icon_2.png" alt="map"></li>
+          <li><p>스탬프 적립</p><img src="images/mytom/icon_3.png" alt="stamp"></li>
+          <li><p>멤버십 혜택 제공</p><img src="images/mytom/icon_4.png" alt="membership"></li>
+        </ul>
+      </div>
+      <div class="s_desc">
+        <img src="images/mytom/mytom_cat1.png" alt="cat_logo">
+        <h1>마이탐(MY TOM)이란?</h1>
+        <p>
+          탐앤탐스의 공식 멤버십 어플리케이션으로 전국 탐앤탐스<br>
+          매장에서 현금처럼 사용할 수 있는 충전식 선불카드 기능과<br>
+          매장 방문 전 주문 및 결제가 가능한 스마트오더 기능을 탑재한<br>
+          탐앤탐스 공식 APP입니다.
+        </p>
+      </div>
+    </div>
+    
+    <div class="membership">
+      <h1>MEMBERSHIP CARD</h1>
+      <ul class="mem_txt">
+        <li>구매처</li>
+        <li>전국 탐앤탐스 매장, 마이탐 APP</li>
+      </ul>
+      <div class="mem_cont">
+        <ul class="m_cont_top">
+          <li>카드 등록 방법</li>
+          <li>*기프티카드는 마이탐 APP 카드 등록 불가</li>
+        </ul>
+        <ul class="m_cont_bt">
+          <li class="on"><span>STEP01</span><br>마이탐 APP 설치</li>
+          <li><span>STEP02</span><br>회원가입</li>
+          <li><span>STEP03</span><br>신용카드</li>
+          <li><span>STEP04</span><br>구매/등록</li>
+          <li><span>STEP05</span><br>등록하기</li>
+          <li><span>STEP06</span><br>카드번호/핀번호 입력</li>
+        </ul>
+        <div class="m_phone">
+        <img src="images/mytom/phone_frame.png" alt="phone">
+          <ul class="m_phone_cont">
+            <li><img src="images/mytom/p00.png" alt=""></li>
+            <li><img src="images/mytom/p01.png" alt=""></li>
+            <li><img src="images/mytom/p02.png" alt=""></li>
+            <li><img src="images/mytom/p03.png" alt=""></li>
+            <li><img src="images/mytom/p04.png" alt=""></li>
+            <li><img src="images/mytom/p05.png" alt=""></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="charge">
+      <ul class="ch_cont">
+        <li>
+          <h4>충전</h4>
+          <p>전국 탐앤탐스 매장 또는<br>마이탐 APP에서 충전가능</p>
+          <span>(1인 충전 제한 금액:10만원,<br>한 아이디당 충전 제한금액:50만원)</span>
+          <img src="images/mytom/charge_1.png" alt="">
+        </li>
+        <li>
+          <h4>일반충전</h4>
+          <p>지정한 카드에<br>금액이 결제 즉시 충전</p>
+          <img src="images/mytom/charge_2.png" alt="">
+        </li>
+        <li>
+          <h4>기준 하한 자동충전</h4>
+          <p>
+            지정한 카드의 잔액이<br>설정한 기준 금액보다<br>
+            낮아지면 사전에 선택한<br>결제 수단으로 지정한<br>금액이 재충전
+          </p>
+        </li>
+        <li>
+          <h4>월정액 자동충전</h4>
+          <p>설정 당일 기준으로<br>매월 지정한 금액이<br>재충전</p>
+          <img src="images/mytom/charge_3.png" alt="">
+        </li>
+      </ul>
+    </div>
+
+    <div class="stamp">
+      <div class="st_top">
+        <img src="images/mytom/mytom_iphone.png" alt="stamp_phone">
+        <div class="st_top_cont">
+          <h1>탐, 스탬프 적립</h1>
+          <p>
+            마이탐에 등록된 카드로 매장에서 사용하시면,<br>
+            음료/베이커리/MD 1개당 탐과 스탬프가 1개씩 적립됩니다.<br>
+            탐의 개수에 의하여 멤버십 등급이 결정되며, 스탬프 12개 적립 시<br>
+            무료음료쿠폰(T) 1매가 제공됩니다.
+          </p>
+          <img src="images/mytom/mytom_cat1.png" alt="cat_logo">
+        </div>
+      </div>
+      <div class="st_bt">
+        <img src="images/mytom/stamp_cat2.png" alt="">
+        <ul class="st_bt_cont">
+          <li>
+            <h4>Welcome</h4>
+            <p class="s_num">탐스탬프 : 0~39</p>
+            <p class="s_txt">
+              12+1 쿠폰 지속 제공(T)<br>
+              시럽/샷 추가 쿠폰 1개<br>
+              생일쿠폰(사이즈업) 1개
+            </p>
+            <img src="images/mytom/stamp_cat1.png" alt="welcome_cat">
+          </li>
+          <li>
+            <h4>Gold</h4>
+            <p class="s_num">탐스탬프 : 40~99</p>
+            <p class="s_txt">
+              12+1 쿠폰 지속 제공(T)<br>
+              시럽/샷 추가 쿠폰 3개<br>
+              생일쿠폰(아메리카노/T) 1개<br>
+              무료음료 쿠폰 2개<br>
+              프로모션 쿠폰 1개 (비정기)<br>
+              신규음료 1+1 쿠폰 1개 (비정기)
+            </p>
+            <p class="s_desc">
+              Gold등급 달성 후 1년 이내<br>
+              30개 미달성 시 하위등급으로 다운
+            </p>
+          </li>
+          <li>
+            <h4>Vip</h4>
+            <p class="s_num">탐스탬프 : 100~</p>
+            <p class="s_txt">
+              12+1 쿠폰 지속 제공(T)<br>
+              시럽/샷 추가 쿠폰 (무제한 발급)<br>
+              생일쿠폰(아메리카노/T) 1개<br>
+              무료음료 쿠폰 3개<br>
+              프레즐 세트 쿠폰 2개<br>
+              프로모션 쿠폰 1개 (비정기)<br>
+              신규음료 1+1 쿠폰 1개 (비정기)
+            </p>
+            <p class="s_desc">
+              Vip등급 달성 후 1년 이내<br>
+              70개 미달성 시 하위등급으로 다운
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wrap_cs">
+      <ul class="customer">
+        <li class="center">
+          <h2>마이탐 고객센터</h2>
+          <div class="callcenter_wrap">
+            <p class="contact">TEL : 02-3412-0781(5번 마이탐) | E-mail : ebiz@tomntoms.com</p>
+            <p class="bu_hour">
+              월~금 09:00 ~ 18:00 (점심시간 : 12~13시 | 주말, 공휴일 휴무)
+            </p>
+            <div class="btn"><a href="mailto:ebiz@tomntoms.com">메일보내기</a></div>
+            </div>
+        </li>
+        <li class="faq">
+          <h2>마이탐 FAQ</h2>
+          <p class="contact">
+            탐앤탐스에게 궁금한게 있으신가요? FAQ에서 답을 찾아보세요!
+          </p>
+          <div class="btn"><a href=#>FAQ 바로가기</a></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="footer">
+        <div class="cs_center">
+            <h2>TOM N TOMS COFFEE</h2>
+            <p>고객만족센터</p>
+            <p class="call">02)3412-0781</p>
+        </div>
+        <img src="images/footer/prezle.png" alt="프레즐">
+        <div class="wrap_info_menu">
+            <div class="info">
+                <h2>(주)탐앤탐스</h2>
+                <p>서울특별시 광진구 아차산로 426  TEL : 02)3412-0781 | FAX : 02)546-1907</p>
+                <p>TEL : 02)3412-0781 | FAX : 02)546-1907</p>
+                <p>대표 : 김도균 | 사업자번호 : 215-86-65050</p>
+                <p>개인정보 책임자 : 이동규</p>
+            </div>
+            <div class="wrap_bt_menu">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">채용안내</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">찾아오시는길</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">개인정보보호처리방침</a></li>
+                    <li><a href="#">마이탐 이용약관</a></li>
+                    <li><a href="#">영상정보처리기기<br>운영관리방침</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrap_bt_sns">
+            <p>ⓒ2024.TOM N TOMS COFFEE ALL RIGHTS RESERVED.</p>
+            <ul class="ico_sns">
+                <li><a href="#"><img src="images/footer/youtube.png" alt="유튜브"></a></li>
+                <li><a href="#"><img src="images/footer/insta.png" alt="인스타"></a></li>
+                <li><a href="#"><img src="images/footer/facebook.png" alt="페북"></a></li>
+                <li><a href="#"><img src="images/footer/blog.png" alt="블로그"></a></li>
+                <li><a href="#"><img src="images/footer/kakao.png" alt="카카오"></a></li>
+            </ul>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{color: black; text-decoration: none;}
+img{vertical-align: top; border: none;}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 100;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 200;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff2') format('woff2');
+    font-display: swap;
+}
+
+body{
+    font-family: 'pretendard', sans-serif;
+}
+
+#footer{
+    width: 100%;
+    height: 921px;
+    background-image: url(../images/footer/footer_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#footer .cs_center{
+    position: absolute;
+    top: 380px; left: 100px;
+}
+#footer .cs_center h2{
+    font-size: 30px;
+    color: #582931
+}
+#footer .cs_center p{
+    font-size: 22px;
+    color: #582931;
+    font-weight: 500;
+    margin: 5px 0;
+}
+#footer .cs_center .call{
+    font-size: 30px;
+    font-weight: 700;
+    color:#CD7D7D
+}
+
+#footer>img{
+    position: absolute;
+    top: 250px; right: 250px;
+    animation: move 1.3s infinite;
+}
+
+#footer .wrap_info_menu{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 620px; left: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+#footer .wrap_info_menu .info h2{
+    color: #2b2b2b;
+    margin-bottom: 20px;
+}
+#footer .wrap_info_menu .info p{
+    color: #616161;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+#footer .wrap_info_menu .info p:nth-child(4){
+    margin-top: 30px;
+}
+
+
+#footer .wrap_info_menu .wrap_bt_menu{
+    display: flex;
+    text-align: right;
+}
+#footer .wrap_info_menu .wrap_bt_menu ul{
+    margin: 0 25px;
+}
+#footer .wrap_info_menu .wrap_bt_menu ul > li{
+    margin-bottom: 18px;
+}
+#footer .wrap_info_menu .wrap_bt_menu a{
+    color: #616161;
+}
+#footer .wrap_info_menu .wrap_bt_menu a:hover{
+    color: #d47a7a;
+    text-decoration: underline;
+}
+
+
+
+#footer .wrap_bt_sns{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position : absolute;
+    bottom: 0px; right: 0px;
+    padding:0 100px ;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: #dad1d1;
+}
+#footer .wrap_bt_sns>p{
+    color: #aaa0a0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 60px;
+}
+#footer .wrap_bt_sns .ico_sns{
+    display: flex;
+}
+#footer .wrap_bt_sns .ico_sns li {
+    margin: 5px 8px 0px;
+    width: 34px;
+    height: 34px;
+    background-color: #f0eaea;
+    border-radius: 50%;
+}
+#footer .wrap_bt_sns .ico_sns li img{
+    width: 22px;
+    padding: 6px 0 0 6px;
+}
+
+@keyframes move{
+    0%{top: 250px;}
+    50%{top: 220px;}
+    100%{top: 250px;}
+}

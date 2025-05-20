@@ -1,0 +1,525 @@
+@charset "UTF-8";
+
+*{margin:0; padding:0;}
+ul{list-style:none;}
+a{text-decoration:none; color:black;}
+img{border:0; vertical-align:center;}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 100;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 200;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff2') format('woff2');
+    font-display: swap;
+}
+
+body{
+    font-family: 'pretendard', sans-serif;
+}
+
+#section .top_btn{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  z-index: 8;
+  background-color: #582931;
+  text-align: center;
+  padding-top: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#section .top_btn span{
+  color: white;
+  line-height: 80px;
+  position: relative;
+  box-sizing: border-box;
+}
+#section .top_btn span::before{
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  margin: -5px 0 ;
+  position: absolute;
+  top: -10px;
+  left: 9px;
+  transform: rotate(-45deg);
+}
+/*메인배너 영역----------------------------------*/
+
+#section .tom_bg{
+  width:100%;
+  height:705px;
+  background-image: url(../images/mytom/mytom_bn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top:0; left:0;
+}
+#section .tom_bg .bg_txt{
+  margin-top:300px;
+  margin-left: 550px;
+  color: #582931;
+}
+#section .tom_bg .bg_txt>p{
+  font-size: 30px;
+  margin-bottom:10px;
+}
+#section .tom_bg .bg_txt>h1{
+  font-size: 40px;
+}
+
+/*기능 영역----------------------------------*/
+
+#section .special{
+  width:100%;
+  margin-top:750px;
+  position: relative;
+}
+#section .special .s_bg{
+  height:958px;
+  background-image: url(../images/mytom/mytom_cont_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#section .special .s_bg>h1{
+  font-size: 40px;
+  color:#582931;
+  padding-top:50px;
+  margin-left:60px;
+}
+#section .special .s_bg .s_list{
+  margin-top:150px;
+  margin-left:120px;
+}
+#section .special .s_bg .s_list>li{
+  display: flex;
+  margin-bottom:70px;
+  position: relative;
+}
+#section .special .s_bg .s_list>li>p{
+  width:400px;
+  height:70px;
+  text-align: center;
+  line-height:70px;
+  background-color: #582931;
+  border-radius: 50px;
+  color:white;
+  font-size: 20px;
+}
+#section .special .s_bg .s_list>li>img{
+  position: absolute;
+}
+#section .special .s_bg .s_list>li:nth-child(1)>img,
+#section .special .s_bg .s_list>li:nth-child(3)>img{
+  bottom:0; left:-20px;
+}
+#section .special .s_bg .s_list>li:nth-child(2)>img,
+#section .special .s_bg .s_list>li:nth-child(4)>img{
+  bottom:0; left:320px;
+}
+#section .special .s_desc{
+  width:950px;
+  height:576px;
+  background-color: #d47a7a;
+  border-radius: 300px 0px 0px 300px;
+  position: absolute;
+  right:0; top:200px;
+}
+#section .special .s_desc>img{
+  width:200px;
+  position: absolute;
+  top:-60px; right:50px;
+}
+#section .special .s_desc>h1{
+  margin-top:180px;
+  margin-left:250px;
+  color:#fff;
+  font-size: 40px;
+}
+#section .special .s_desc>p{
+  margin-top:30px;
+  margin-left:250px;
+  color:white;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+/*멤버십카드 영역----------------------------------*/
+
+#section .membership{
+  margin-top:150px;
+  position: relative;
+}
+#section .membership>h1{
+  font-size: 40px;
+  color:#582931;
+  margin-left: 60px;
+}
+#section .membership .mem_txt{
+  margin-top:60px;
+  margin-left:60px;
+}
+#section .membership .mem_txt>li:nth-child(1){
+  width:150px; height: 60px;
+  border-radius: 40px;
+  background-color: #d47a7a;
+  text-align: center;
+  line-height: 60px;
+  font-size: 25px;
+  color:white;
+  letter-spacing: 2px;
+}
+#section .membership .mem_txt>li:nth-child(2){
+  font-size: 25px;
+  color:#2b2b2b;
+  margin-top:20px;
+}
+#section .membership .mem_cont{
+  width:100%; height:550px;
+  background-color: #f7f7f7;
+  margin-top:40px;
+}
+#section .membership .mem_cont .m_cont_top{
+  width:1100px;
+  display: flex;
+  justify-content: space-between;
+  margin-left:50px;
+  padding-top:20px;
+}
+#section .membership .mem_cont .m_cont_top>li:nth-child(1){
+  font-size: 30px;
+  color: #582931;
+}
+#section .membership .mem_cont .m_cont_top>li:nth-child(2){
+  color:#2b2b2b;
+  line-height: 50px;
+}
+#section .membership .mem_cont .m_cont_bt{
+  width:1050px; height:350px;
+  margin-top:60px;
+  margin-left:160px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+#section .membership .mem_cont .m_cont_bt>li{
+  width:270px; height:150px;
+  background-color: #d9d9d9;
+  border-radius: 30px;
+  text-align: center;
+  line-height:30px;
+  padding-top:45px;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+}
+#section .membership .mem_cont .m_cont_bt>li.on,
+#section .membership .mem_cont .m_cont_bt>li:hover{
+  background-color:#FBE673;
+}
+#section .membership .mem_cont .m_cont_bt>li:after{
+  content:"\25B6";
+  display: block;
+  font-size: 2em;
+  position:absolute;
+  top:50%; right:-75px;
+  transform: translateY(-50%);
+}
+#section .membership .mem_cont .m_cont_bt>li:last-child:after{
+  display: none;
+}
+#section .membership .mem_cont .m_cont_bt>li>span{
+  font-size: 18px;
+  font-weight: 600;
+}
+#section .membership .m_phone{
+  position: relative;
+}
+#section .membership .m_phone>img{
+  width:650px;
+  position: absolute;
+  top:-600px; right:30px;
+}
+#section .membership .m_phone .m_phone_cont>li{
+  position: absolute;
+  top:-570px; right:136px;
+  display: none;
+}
+#section .membership .m_phone .m_phone_cont>li:nth-child(1){
+  display: block;
+}
+#section .membership .m_phone .m_phone_cont>li>img{
+  width:360px;
+}
+
+/*충전 영역----------------------------------*/
+
+#section .charge{
+  margin-top:200px;
+}
+#section .charge .ch_cont{
+  width:1600px;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+#section .charge .ch_cont>li{
+  width:380px; height:400px;
+  background-color: #f6f0f1;
+  border-radius: 100px 100px 0px 0px;
+  text-align: center;
+  position: relative;
+  transition:all 0.3s;
+  cursor: pointer;
+}
+#section .charge .ch_cont>li:hover{
+  background-color: #fee9ec;
+}
+#section .charge .ch_cont>li>h4{
+  font-size: 30px;
+  color: #d47a7a;
+  margin-top:100px;
+}
+#section .charge .ch_cont>li>p{
+  margin-top:50px;
+  margin-bottom:70px;
+  font-size: 20px;
+  color:#2b2b2b;
+  line-height: 28px;
+}
+#section .charge .ch_cont>li>span{
+  color:#656565;
+}
+#section .charge .ch_cont>li>img{
+  position: absolute;
+}
+#section .charge .ch_cont>li:nth-child(1)>img{
+  top:-70px; left:-40px;
+}
+#section .charge .ch_cont>li:nth-child(2)>img{
+  top:205px; left:-50px;
+}
+#section .charge .ch_cont>li:nth-child(4)>img{
+  bottom:0; right:0;
+}
+
+/*스탬프 영역----------------------------------*/
+
+#section .stamp{
+  margin-top:250px;
+  position: relative;
+}
+#section .stamp .st_top{
+  height:1050px;
+  background-image: url(../images/mytom/stamp_frame.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+#section .stamp .st_top>img{
+  width:850px;
+  position: absolute;
+  top:-130px; left:70px;
+}
+#section .stamp .st_top .st_top_cont{
+  position: absolute;
+  top:150px; right:350px;
+}
+#section .stamp .st_top .st_top_cont>h1{
+  font-size: 40px;
+  color:white;
+  margin-bottom:30px;
+}
+#section .stamp .st_top .st_top_cont>p{
+  font-size: 20px;
+  color:white;
+  letter-spacing: 1px;
+  line-height: 28px;
+}
+#section .stamp .st_top .st_top_cont>img{
+  width:150px;
+  position: absolute;
+  top:-90px; left:250px;
+}
+#section .stamp .st_bt>img{
+  position: absolute;
+  top:480px; left:47%;
+}
+#section .stamp .st_bt .st_bt_cont{
+  width:1700px;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top:-320px;
+  position: relative;
+  z-index: 5;
+}
+#section .stamp .st_bt .st_bt_cont>li{
+  width:480px; height:600px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.267);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+#section .stamp .st_bt .st_bt_cont>li:hover{
+  transform: translateY(-30px);
+}
+#section .stamp .st_bt .st_bt_cont>li>h4{
+  font-size: 35px;
+  color: #d47a7a;
+  margin-top:70px;
+  margin-bottom:20px;
+}
+#section .stamp .st_bt .st_bt_cont>li .s_num{
+  font-size: 22px;
+  color:#c5aaaf;
+  margin-bottom:60px;
+}
+#section .stamp .st_bt .st_bt_cont>li .s_txt{
+  font-size: 24px;
+  color:#2b2b2b;
+}
+#section .stamp .st_bt .st_bt_cont>li:nth-child(1)>img{
+  margin-top:86px;
+}
+#section .stamp .st_bt .st_bt_cont>li .s_desc{
+  font-size: 20px;
+  color:#c5aaaf
+}
+#section .stamp .st_bt .st_bt_cont>li:nth-child(2) .s_desc{
+  margin-top:130px;
+}
+#section .stamp .st_bt .st_bt_cont>li:nth-child(3) .s_desc{
+  margin-top:100px;
+}
+
+
+/* 고객센터 영역----------------------------------- */
+#section .wrap_cs{
+    width: 100%;
+    height: 400px;
+    background-color: #d47a7a;
+    margin-top: 300px;
+    /* background-image: url(images/mytom/customer_bg.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#section .wrap_cs .customer{
+    width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#section .wrap_cs .customer li{
+    width: 50%;
+    height: 300px;
+    padding-top: 70px;
+}
+#section .wrap_cs .customer li:nth-child(1){
+    position: relative;
+}
+#section .wrap_cs .customer li:nth-child(1)::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.452);
+    position: absolute;
+    top: 10%; right: 0px;
+}
+#section .wrap_cs .customer li h2{
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+#section .wrap_cs .customer .callcenter_wrap{
+    margin: 30px 0;
+}
+#section .wrap_cs .customer li p{
+    font-size: 18px;
+    color: white;
+}
+#section .wrap_cs .customer .bu_hour{
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    margin-top: 3px;
+}
+
+#section .wrap_cs .faq .btn{
+    margin-top: 63px;
+}
+#section .wrap_cs .btn a{
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    border: 1px solid rgb(255, 255, 255);
+    display: block;
+    box-sizing: border-box;
+    color: white;
+    padding-top: 15px;
+}
+#section .wrap_cs .btn a:hover{
+    background-color: #fff;
+    color: #d47a7a;
+}

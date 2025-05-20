@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOM N TOMS COFFEE</title>
+    <link rel="stylesheet" href="css/toms_index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".bn_bt>li").click(function(){
+                let list = $(this).index();
+                $(".bn_bt>li").removeClass("on");
+                $(".bn_bt>li").eq(list).addClass("on");
+
+                $(".bn_img>li").stop().fadeOut();
+                $(".bn_img>li").eq(list).stop().fadeIn();
+            });
+            
+            let i = 0;
+            let count = $(".bn_img>li").length;
+            let autoFade = setInterval(function(){
+                if(i == count - 1){
+                    i = 0;
+                }else{
+                    i++;
+                }
+                $(".bn_bt>li").removeClass("on");
+                $(".bn_bt>li").eq(i).addClass("on");
+
+                $(".bn_img>li").stop().fadeOut();
+                $(".bn_img>li").eq(i).stop().fadeIn();
+            }, 3000);
+
+            $(".bn_img").mouseenter(function(){
+                clearInterval(autoFade)
+            });
+            $(".bn_img").mouseleave(function(){
+                autoFade = setInterval(function(){
+                if(i == count - 1){
+                    i = 0;
+                }else{
+                    i++;
+                }
+                $(".bn_bt>li").removeClass("on");
+                $(".bn_bt>li").eq(i).addClass("on");
+
+                $(".bn_img>li").stop().fadeOut();
+                $(".bn_img>li").eq(i).stop().fadeIn();
+            }, 3000);
+            });
+
+            
+            
+            $(".eve_bt>li").click(function(){
+                let ev_list = $(this).index();
+                $(".eve_bt>li").removeClass("active");
+                $(".eve_bt>li").eq(ev_list).addClass("active");
+
+                $(".eve_cont>li").stop().fadeOut();
+                $(".eve_cont>li").eq(ev_list).stop().fadeIn();
+            
+            });
+            let event = 0;
+            let e_count = $(".eve_cont>li").length;
+            let e_autoFade = setInterval(function(){
+                if(event == e_count - 1){
+                    event = 0;
+                }else{
+                    event++;
+                }
+                $(".eve_bt>li").removeClass("active");
+                $(".eve_bt>li").eq(event).addClass("active");
+
+                $(".eve_cont>li").stop().fadeOut();
+                $(".eve_cont>li").eq(event).stop().fadeIn();
+            }, 4000);
+
+            $(".eve_cont").mouseenter(function(){
+                clearInterval(e_autoFade)
+            });
+            $(".eve_cont").mouseleave(function(){
+                autoFade = setInterval(function(){
+                if(event == e_count - 1){
+                    event = 0;
+                }else{
+                    event++;
+                }
+                $(".eve_bt>li").removeClass("active");
+                $(".eve_bt>li").eq(event).addClass("active");
+
+                $(".eve_cont>li").stop().fadeOut();
+                $(".eve_cont>li").eq(event).stop().fadeIn();
+            }, 4000);
+            });
+
+            
+            $(".top_btn").click(function(){
+                $('html, body').stop().animate({scrollTop : 0}, 500);
+            });
+
+
+            $(".next").click(function(){
+                $(".n_item_box").stop().animate({"margin-left":"-200%"},1000,function(){
+                $(".n_item_box>ul").first().appendTo(".n_item_box");
+                $(".n_item_box").css({"margin-left":"-100%"})
+                });
+            });
+            $(".prev").click(function(){
+                $(".n_item_box").stop().animate({"margin-left":"0%"},1000,function(){
+                    $(".n_item_box>ul").last().prependTo(".n_item_box");
+                    $(".n_item_box").css({"margin-left":"-100%"})
+                });
+            });
+
+            $(".b_next").click(function(){
+                $(".b_item_box").stop().animate({"margin-left":"-200%"},1000,function(){
+                    $(".b_item_box>ul").first().appendTo(".b_item_box");
+                    $(".b_item_box").css({"margin-left":"-100%"})
+                });
+                });
+                $(".b_prev").click(function(){
+                $(".b_item_box").stop().animate({"margin-left":"0%"},1000,function(){
+                    $(".b_item_box>ul").last().prependTo(".b_item_box");
+                    $(".b_item_box").css({"margin-left":"-100%"})
+                });
+            });
+            
+            
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        <h1 class="logo">
+            <a href="index.html"><img src="images/index/logo.png" alt="logo"></a>
+        </h1>
+        <div class="nav_bg">
+            <ul class="nav">
+                <li>
+                    <a href="#">TOM N TOMS</a>
+                    <ul class="nav_sub">
+                        <li><a href="#">브랜드 소개</a></li>
+                        <li><a href="#">채용안내</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">찾아오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="menu.html">MENU</a>
+                    <ul class="nav_sub">
+                        <li><a href="#">신메뉴</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">푸드</a></li>
+                        <li><a href="#">MD</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">EVENT</a>
+                </li>
+                <li>
+                    <a href="#">STORE</a>
+                    <ul class="nav_sub">
+                        <li><a href="#">국내매장</a></li>
+                        <li><a href="#">해외매장</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="mytom.html">MY TOM</a>
+                </li>
+                <li>
+                    <a href="#">SERVICE</a>
+                    <ul class="nav_sub">
+                        <li><a href="#">가맹점 개설문의</a></li>
+                        <li><a href="#">렌탈 서비스</a></li>
+                        <li><a href="#">탐스 라이프 스토어</a></li>
+                        <li><a href="#">제휴 할인</a></li>
+                        <li><a href="#">제휴 문의</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">COMUNITY</a>
+                    <ul class="nav_sub">
+                        <li><a href="#">고객의 소리</a></li>
+                        <li><a href="#">예술문화활동</a></li>
+                        <li><a href="#">사회공헌활동</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">KR ▼</a>
+                    <ul class="last_sub">
+                        <li>KOR</li>
+                        <li>ENG</li>
+                        <li>CHN</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<!-- section-------------------------------------------------------------- -->
+    <div id="section">
+        <div class="top_btn">
+            <span>TOP</span>
+        </div>
+        <div class="wrap_m_br">
+            <ul class="bn_img">
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="bn_bt">
+                <li class="on"></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="new_mn">
+            <h1>NEW MENU</h1>
+            <p>처음 만나는 맛의 설렘! 계절처럼 찾아온 새로운 맛!</p>
+            <div class="wrap_all">
+                <div class="n_item_box">
+                    <ul class="new_item_1 item_wrap">
+                        <li>
+                            <a href="#">
+                                <img src="images/index/new_menu1_1.png" alt="신메뉴1">
+                                <div class="txt">
+                                    <h3 class="item_name">체리블라썸 탐앤치노</h3>
+                                    <p class="desc">
+                                        체리의 향과 맛을 더욱 진하게<br>
+                                        가득 담은 부드러운 탐앤치노
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/index/new_menu1_2.png" alt="신메뉴2">
+                                <div class="txt">
+                                    <h3 class="item_name">떡꼬치 프레즐</h3>
+                                    <p class="desc">
+                                        한국인이라면 한번쯤 먹어본 떡꼬치!<br>
+                                        달콤하고 매콤한 양념을 프레즐에!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/index/new_menu1_3.png" alt="신메뉴3">
+                                <div class="txt">
+                                    <h3 class="item_name">체리 레몬에이드</h3>
+                                    <p class="desc">
+                                        흩날리는 벚꽃잎을 담은<br>
+                                        체리맛 코코넛 젤리까지!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="new_item_2 item_wrap">
+                        <li>
+                            <a href="#">
+                                <img src="images/index/new_menu2_1.png" alt="신메뉴4">
+                                <div class="txt">
+                                    <h3 class="item_name">판단크림 코코넛 커피</h3>
+                                    <p class="desc">
+                                        고소하고 달달한 판단과<br>
+                                        쫄깃한 코코넛 젤리까지!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/index/new_menu2_2.png" alt="신메뉴5">
+                                <div class="txt">
+                                    <h3 class="item_name">판단 코코넛 커피스무디</h3>
+                                    <p class="desc">
+                                        판단과 부드럽고 달콤한 코코넛,<br>
+                                        그리고 커피의 만남!
+                                    </p>
+                                </div>
+                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/index/new_menu2_3.png" alt="신메뉴6">
+                                <div class="txt">
+                                    <h3 class="item_name">판단 코코넛 라떼</h3>
+                                    <p class="desc">
+                                        달달한 판단과 코코넛,<br>
+                                        부드러운 우유의 조화!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="new_item_3 item_wrap">
+                        <li>
+                            <a href="#">
+                                <img src="images/index/new_menu3_1.png" alt="신메뉴3_1">
+                                <div class="txt">
+                                    <h3 class="item_name">수박스무디</h3>
+                                    <p class="desc">
+                                        여름하면 수박!<br>
+                                        수박 착즙주스를 활용한 스무디
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/index/new_menu3_2.png" alt="신메뉴3_2">
+                                <div class="txt">
+                                    <h3 class="item_name">딸기복숭아 컵빙수</h3>
+                                    <p class="desc">
+                                        1인도 즐길 수 있는<br>
+                                        탐탐의 딸기복숭아 빙수!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/index/new_menu3_3.png" alt="신메뉴3_3">
+                                <div class="txt">
+                                    <h3 class="item_name">수박주스</h3>
+                                    <p class="desc">
+                                        베트남산 HPP 착즙주스로<br>
+                                        시원하고 달콤하게!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="side_btn">
+                    <li class="prev"><img src="images/index/arrow_prev.png" alt=""></li>
+                    <li class="next"><img src="images/index/arrow_next.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="best_mn">
+            <h1>BEST MENU</h1>
+            <p>변함없는 베스트! 탐앤탐스의 시그니처!</p>
+            <div class="wrap_all">
+                <div class="b_item_box">
+                    <ul class="best_item_1 item_wrap">
+                        <li>
+                            <a href="#">
+                                <img src="images/index/best_menu1_1.png" alt="베스트메뉴1">
+                                <div class="txt">
+                                    <h3 class="item_name">아이스 카라멜 마끼아또</h3>
+                                    <p class="desc">
+                                        풍부한 거품과 카라멜 소스로<br>
+                                        토핑이 가미된 달콤한 커피음료
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/index/best_menu1_2.png" alt="베스트메뉴2">
+                                <div class="txt">
+                                    <h3 class="item_name">미숫크림 탐앤치노</h3>
+                                    <p class="desc">
+                                        고소한 미숫가루의 풍미와 바닐라<br>
+                                        아이스크림으로 달콤한 탐앤치노!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/index/best_menu1_3.png" alt="베스트메뉴3">
+                                <div class="txt">
+                                    <h3 class="item_name">허니버터 브레드</h3>
+                                    <p class="desc">
+                                        깊고 진한 카라멜소스,<br>
+                                        체리맛 코코넛 젤리까지!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="best_item_2 item_wrap">
+                        <li>
+                            <a href="#">
+                                <img src="images/index/best_menu2_1.png" alt="베스트4">
+                                <div class="txt">
+                                    <h3 class="item_name">꼰대라떼 스테비아</h3>
+                                    <p class="desc">
+                                        당 걱정없이 즐길 수 있는<br>
+                                        꼰대라떼 스테비아!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/index/best_menu2_2.png" alt="베스트5">
+                                <div class="txt">
+                                    <h3 class="item_name">아이스 제주 그린라떼</h3>
+                                    <p class="desc">
+                                        쌉싸름한 녹차와 우유가 어우러져<br>
+                                        녹차의 진하고 풍부한 맛이 일품!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/index/best_menu2_3.png" alt="베스트6">
+                                <div class="txt">
+                                    <h3 class="item_name">아이스 바닐라 라떼</h3>
+                                    <p class="desc">
+                                        향긋한 바닐라 시럽을 더해<br>
+                                        부드럽고 달콤함이 매력적!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="best_item_3 item_wrap">
+                        <li>
+                            <a href="#">
+                                <img src="images/index/best_menu3_1.png" alt="베스트메뉴7">
+                                <div class="txt">
+                                    <h3 class="item_name">복숭아 아이스티</h3>
+                                    <p class="desc">
+                                        진한 복숭아향과 달콤한 맛이<br>
+                                        일품인 스리랑카 복숭아 아이스티
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/index/best_menu3_2.png" alt="베스트메뉴8">
+                                <div class="txt">
+                                    <h3 class="item_name">플레인 요거트 스무디</h3>
+                                    <p class="desc">
+                                        정통 요거트의 농후한 맛을 살린<br>
+                                        플레인 요거트 스무디!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/index/best_menu3_3.png" alt="베스트메뉴9">
+                                <div class="txt">
+                                    <h3 class="item_name">아이스 아메리카노</h3>
+                                    <p class="desc">
+                                        에스프레소의 풍부한 향에<br>
+                                        물을 첨가하여 부드럽게 즐기는 커피!
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul> 
+                </div>
+                <ul class="side_btn">
+                    <li class="b_prev"><img src="images/index/arrow_prev.png" alt=""></li>
+                    <li class="b_next"><img src="images/index/arrow_next.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event_title">
+                <h1 class="eve_title">EVENT</h1>
+                <p>
+                    맛있는 순간에 더해진 기분좋은 놀라움!<br>
+                    탐앤탐스만의 다양한 이벤트를 둘러보세요!
+                </p>
+                <img src="images/index/cat.png" alt="cat1">
+                <a href="#"><span>more</span></a>
+                <ul class="eve_bt">
+                    <li class="active"></li>
+                    <li></li>
+                </ul>
+            </div>
+            <ul class="eve_cont">
+                <li><img src="images/index/event_01.png" alt="이벤트배너"></li>
+                <li><img src="images/index/event_02.png" alt="이벤트배너"></li>
+            </ul>
+            
+        </div>
+
+        <div class="insta">
+            <h1>#INSTARGRAM</h1>
+            <img src="images/index/insta_phone.png" alt="phone">
+            <ul class="ins_cont">
+                <li><a href="#"><img src="images/index/insta_01.png" alt="insta1"></a></li> 
+                <li><a href="#"><img src="images/index/insta_02.png" alt="insta1"></a></li> 
+                <li><a href="#"><img src="images/index/insta_03.png" alt="insta1"></a></li> 
+                <li><a href="#"><img src="images/index/insta_04.png" alt="insta1"></a></li> 
+            </ul>
+        </div>
+
+        <div class="contact">
+            <h1>CONTACT US</h1>
+            <ul class="con_list">
+                <li><a href="#">가맹점 개설문의</a></li>
+                <li><a href="#">매장찾기</a></li>
+                <li><a href="#">탐앤탐스 몰</a></li>
+                <li><a href="#">단체 및 기업구매</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="cs_center">
+            <h2>TOM N TOMS COFFEE</h2>
+            <p>고객만족센터</p>
+            <p class="call">02)3412-0781</p>
+        </div>
+        <img src="images/footer/prezle.png" alt="프레즐">
+        <div class="wrap_info_menu">
+            <div class="info">
+                <h2>(주)탐앤탐스</h2>
+                <p>서울특별시 광진구 아차산로 426  TEL : 02)3412-0781 | FAX : 02)546-1907</p>
+                <p>TEL : 02)3412-0781 | FAX : 02)546-1907</p>
+                <p>대표 : 김도균 | 사업자번호 : 215-86-65050</p>
+                <p>개인정보 책임자 : 이동규</p>
+            </div>
+            <div class="wrap_bt_menu">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">채용안내</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">찾아오시는길</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">개인정보보호처리방침</a></li>
+                    <li><a href="#">마이탐 이용약관</a></li>
+                    <li><a href="#">영상정보처리기기<br>운영관리방침</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrap_bt_sns">
+            <p>ⓒ2024.TOM N TOMS COFFEE ALL RIGHTS RESERVED.</p>
+            <ul class="ico_sns">
+                <li><a href="#"><img src="images/footer/youtube.png" alt="유튜브"></a></li>
+                <li><a href="#"><img src="images/footer/insta.png" alt="인스타"></a></li>
+                <li><a href="#"><img src="images/footer/facebook.png" alt="페북"></a></li>
+                <li><a href="#"><img src="images/footer/blog.png" alt="블로그"></a></li>
+                <li><a href="#"><img src="images/footer/kakao.png" alt="카카오"></a></li>
+            </ul>
+        </div>
+        
+    </div>
+</body>
+</html>
